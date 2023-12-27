@@ -1,0 +1,74 @@
+call an api , with gives one name and sort on basis of 1st name
+
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+const UserData = () => {
+  const [allUserInfo, setAllUserInfo] = useState([]);
+  const [addFlag, setAddFlag] = useState(false);
+
+  const getUSerDataInfo = () => {
+    axios.get("https://randomuser.me/api/").then((res) => {
+      const response = res.data.results[0];
+      console.log("response is", response);
+
+      const tempObj = [...allUserInfo];
+
+      tempObj.push(response);
+
+      if (tempObj.length > 1) {
+        tempObj.sort((a, b) => {
+          const nameA = a.name.first.toUpperCase();
+          const nameB = b.name.first.toUpperCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        });
+      }
+
+      setAllUserInfo(tempObj);
+
+      console.log("tempArr is", tempObj);
+      console.log("tempArr sorted", tempObj.sort());
+    });
+  };
+
+  useEffect(() => {
+    getUSerDataInfo();
+  }, [addFlag]);
+
+  const toggleAddFlag = () => {
+    setAddFlag(!addFlag);
+  };
+
+  return (
+    <>
+      <div>
+        {allUserInfo?.map((user) => {
+          return (
+            <>
+              <span style={{ marginRight: "8px" }}>{user.name.first}</span>
+              <span>{user.gender}</span>
+              <br />
+            </>
+          );
+        })}
+      </div>
+
+      <div>
+        <button onClick={toggleAddFlag}>Add User</button>
+      </div>
+    </>
+  );
+};
+
+export default UserData;
+
+
+
+
+2nd ques reverse an array without using any method or any new array. (unable to complete it)

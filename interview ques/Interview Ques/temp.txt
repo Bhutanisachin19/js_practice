@@ -1,0 +1,70 @@
+
+axios.get("/formData").then(res => dispatch(addData(res.data))).catch(err => console.log(err));
+
+
+
+//action
+
+const GetApiDAta = () =>{
+
+	return{
+	
+	axios.get("/formData").then(res => dispatch(addData(res.data))).catch(err => console.log(err));
+
+}
+}
+
+
+//reducer
+
+case ADD_DATA:
+	retur{
+		...state ,
+			data : action.payload
+		}
+
+
+
+
+/////////////
+
+
+
+const data = await axios.get("/form);
+
+
+/////////////
+
+
+test();
+
+function test (){
+	console.log("Test called");
+}
+
+
+
+var str = "Sachin"
+str.slice(0,3) -> Sach
+str.splice(0,3) -> hin
+
+
+
+
+
+<div class="row">
+	<div class="Col" ></div>
+
+	<div class="Col" ></div>
+
+	<div class="Col" ></div>
+
+</div>
+
+
+
+
+
+
+
+

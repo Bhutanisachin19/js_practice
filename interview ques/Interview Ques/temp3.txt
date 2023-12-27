@@ -1,0 +1,80 @@
+1 button
+2 text area
+3 label
+
+
+
+
+const Comp1 = () =>{
+const [etext, setText] = useState()
+
+const [flag, setFlag] = useState(false)
+
+retur {
+<div>
+
+<label> {flag ? text : ""} </label>
+
+<input type="text"  onChnage={setText(e.target.value)} />
+
+<Comp2 text={text}  />
+
+<button onClicl={setFlag(true)} > </button>
+</div>
+
+
+
+////////////////
+
+const Comp2 = (props) => {
+}
+
+
+
+
+table 1 empoyee and table 2 department
+employee -> emp iD , name , salary , departmentID
+
+
+Employee.insert('empID ': 1 , 'name': Temp , 'salary' : 5k , 'deptID': 1).then(res =>console.log()).catch(err => conosle.log());
+
+
+
+
+
+axios.get('localhost:abc/').then(res => console).catch(err => console.log)
+
+
+const arr [5,8,6,1,2,10]
+
+let max = 0;
+let max2 = 0;
+
+for(let i=0;i<arr.lenth;i++)
+{
+	if(arr[i] > max)
+{	max=arr[i];
+}
+
+	if(arr[i] > max2 && arr[i] < max)
+		{
+			
+		max2 = arr[i]
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

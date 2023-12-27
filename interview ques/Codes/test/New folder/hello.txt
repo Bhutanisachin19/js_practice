@@ -1,0 +1,44 @@
+Var x = [{name: “Sachin”, age:12},{name: “Bhutani”, age:21} ]
+If age> 20 - then name should be Bhutani_200
+
+
+for(let i=0 ; i< x.length ; i++)
+{
+	if(x[i].age > 20)
+		X[i].name = “Bhutani_20”
+}
+
+
+
+Var srt = “Hello World”
+
+Var new_str = “”;
+
+for( i=str.length ; i >=0 ;i --)
+{
+	New_str += str[i]
+}
+
+
+Var arr = [1,2,[3,4,[5,6,[7,8],9],10]];
+[1,2,3,4,5,6,7,8,9,10]
+
+
+
+Let newArr = []
+
+Const func = (arr) => {
+
+
+for(let i=0;i<arr.length ; i++)
+{
+	if(arr[i] == object )
+	{
+		func(arr[i])
+}
+else
+		newArr.push(arr[i])
+}
+}
+
+

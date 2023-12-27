@@ -1,0 +1,47 @@
+const sampleObject = {
+    "h1": "1",
+    "h2": 2,
+    "h3": {
+        "h4": "4",
+        "h5": 5,
+        "h6": {
+            "h7": 7
+        }
+    }
+}
+
+/*
+  {
+    "h1": "1",
+    "h2": "2",
+    "h3": {
+        "h4": "4",
+        "h5": "5",
+        "h6": {
+            "h7": "7"
+        }
+    }
+}
+
+*/
+
+const func = (sampleObj) => {
+
+    for(const i in sampleObj)
+    {
+        // console.log(i , typeof sampleObj[i])
+
+        if(typeof sampleObj[i] == 'number')
+        {
+            sampleObj[i] = sampleObj[i].toString();   
+        }
+        else if(typeof sampleObj[i] == 'object'){
+            func(sampleObj[i]);
+        }        
+    }
+}
+
+
+func(sampleObject);
+
+console.log("Final Obj" , sampleObject);
