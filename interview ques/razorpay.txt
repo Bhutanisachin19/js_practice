@@ -1,0 +1,151 @@
+const obj = {
+  first_name: "Penny",
+  last_name: "Hofstadter",
+  print_name: function(){
+    return this.first_name + this.last_name
+  }
+}
+const obj2 = {
+  fist_name: "Leonard",
+  last_name: "Hofstadter"
+}
+console.log(obj.print_name())
+
+
+
+
+
+
+
+
+
+function logMessage(message) {
+  console.log(message);
+}
+function setupFunctions() {
+  var functions= [
+    { functionName: 'a', message: 'first message' },
+    { functionName: 'b', message: 'second message' },
+    { functionName: 'c', message: 'third message'},
+  ];
+  
+  for(i = 0; i < functions.length; i++) {
+      var item = functions[i];
+    
+      window[item.functionName] = function() {
+        logMessage(item.message);
+      }
+  }
+}
+setupFunctions();
+a()
+b()
+c()
+
+
+
+
+
+
+implement map functionality in Object
+const obj = {
+ upi: true,
+ netbanking: true,
+ cards: true,
+};
+obj.map((value, key) => {
+ return {
+   status: value,
+   _type: "payment_method",
+   key,
+ };
+});
+
+/ expected output
+// {
+//   upi: {
+//     status: true,
+//     _type: "payment_method",
+//     key: "upi",
+//   },
+//  ...
+// }
+
+
+
+
+let i = 0;
+Promise.resolve(`promise ${++i}`).then(console.log);
+console.log(`console ${++i}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+const obj = {
+ upi: true,
+ netbanking: true,
+ cards: true,
+};
+
+
+
+// expected output
+// {
+//   upi: {
+//     status: true,
+//     _type: "payment_method",
+//     key: "upi",
+//   },
+//  ...
+// }
+
+Object.prototype.map = function(){
+let tempObj = {};
+
+for (let i in obj){
+console.log('testing..', obj)
+
+/* if(obj.hasOwnProperty(i)){
+ let nestedObj =  {
+  status : obj[i],
+  _type: "payment_method",
+  key : i
+ }
+ 
+ tempObj[i] = nestedObj;
+ }*/
+
+
+}
+ /* return tempObj */
+}
+
+/* obj.map((value, key) => {
+ return {
+   status: value,
+   _type: "payment_method",
+   key,
+ };
+}); */
+
+
+obj.map();
+
